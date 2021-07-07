@@ -1,5 +1,6 @@
-import { Link } from './../../models/Link.js'
-export const redirect = async (req, res) => {
+const Link = require('./../../models/Link')
+
+const redirect = async (req, res) => {
   try {
     const link = await Link.findOne({ linkCode: req.params.code })
     if (link) {
@@ -9,4 +10,8 @@ export const redirect = async (req, res) => {
     }
     res.status(404).json({ message: 'Invalid link' })
   } catch (error) {}
+}
+
+module.exports = {
+  redirect,
 }

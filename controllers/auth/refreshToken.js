@@ -1,7 +1,7 @@
-import { User } from './../../models/User.js'
-import jwt from 'jsonwebtoken'
+const User = require('./../../models/User')
+const jwt = require('jsonwebtoken')
 
-export const refreshToken = async (req, res) => {
+const refreshToken = async (req, res) => {
   try {
     const user = await User.findOne({ _id: req.user.userId })
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET_KEY, {
@@ -17,4 +17,8 @@ export const refreshToken = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: 'Something went wrong...' })
   }
+}
+
+module.exports = {
+  refreshToken,
 }

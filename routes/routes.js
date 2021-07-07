@@ -1,17 +1,18 @@
-import { Router } from 'express'
-import { signUp } from './../controllers/auth/signUp.js'
-import { signIn } from './../controllers/auth/signIn.js'
-import { refreshToken } from './../controllers/auth/refreshToken.js'
-import { generateLink } from '../controllers/links/generateLink.js'
-import { getLinks } from './../controllers/links/getLinks.js'
-import { getLinkById } from './../controllers/links/getLinkById.js'
-import {
+const { Router } = require('express')
+const { signUp } = require('./../controllers/auth/signUp')
+const { signIn } = require('./../controllers/auth/signIn.js')
+const { refreshToken } = require('./../controllers/auth/refreshToken')
+const { generateLink } = require('../controllers/links/generateLink')
+const { getLinks } = require('./../controllers/links/getLinks')
+const { getLinkById } = require('./../controllers/links/getLinkById')
+const {
   signUpMiddleware,
   signInMiddleware,
   verifyUserMiddleware,
-} from './../middlewares/auth.js'
-import { generate } from '../middlewares/generate.js'
-import { deleteLink } from '../controllers/links/deleteLink.js'
+} = require('./../middlewares/auth')
+const { generate } = require('../middlewares/generate')
+const { deleteLink } = require('../controllers/links/deleteLink')
+
 const route = new Router()
 
 // ---authRoutes---
@@ -25,4 +26,4 @@ route.get('/links/', verifyUserMiddleware, getLinks)
 route.get('/links/:id', verifyUserMiddleware, getLinkById)
 route.delete('/links/delete/:id', deleteLink)
 
-export default route
+module.exports = route

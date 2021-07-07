@@ -1,7 +1,8 @@
-import { Link } from './../../models/Link.js'
-import shortId from 'shortid'
-import { validationResult } from 'express-validator'
-export const generateLink = async (req, res) => {
+const Link = require('./../../models/Link')
+const shortId = require('shortid')
+const { validationResult } = require('express-validator')
+
+const generateLink = async (req, res) => {
   try {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
@@ -32,4 +33,8 @@ export const generateLink = async (req, res) => {
     console.log(error)
     res.status(500).json({ message: 'Something went wrong...' })
   }
+}
+
+module.exports = {
+  generateLink,
 }

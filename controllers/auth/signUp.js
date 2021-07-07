@@ -1,8 +1,8 @@
-import bcrypt from 'bcryptjs'
-import { validationResult } from 'express-validator'
-import { User } from './../../models/User.js'
+const User = require('./../../models/User')
+const bcrypt = require('bcryptjs')
+const { validationResult } = require('express-validator')
 
-export const signUp = async (req, res) => {
+const signUp = async (req, res) => {
   try {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
@@ -36,4 +36,8 @@ export const signUp = async (req, res) => {
     console.log(error)
     res.status(500).json({ message: 'Something went wrong...' })
   }
+}
+
+module.exports = {
+  signUp,
 }

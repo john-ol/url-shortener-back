@@ -1,4 +1,9 @@
-import { check } from 'express-validator'
-export const generate = () => {
+const { check } = require('express-validator')
+
+const generate = () => {
   return check('originLink', 'Invalid link').isURL()
+}
+
+module.exports = {
+  generate,
 }

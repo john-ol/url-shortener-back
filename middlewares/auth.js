@@ -1,7 +1,7 @@
-import { check } from 'express-validator'
-import jwt from 'jsonwebtoken'
+const { check } = require('express-validator')
+const jwt = require('jsonwebtoken')
 
-export const signUpMiddleware = () => {
+const signUpMiddleware = () => {
   return [
     check('email', 'Invalid e-mail').isEmail(),
     check('password', 'Password must be at least 6 characters').isLength({
@@ -10,14 +10,13 @@ export const signUpMiddleware = () => {
   ]
 }
 
-export const signInMiddleware = () => {
+const signInMiddleware = () => {
   return [
     check('email', 'Invalid e-mail').isEmail(),
     check('password', 'Please, enter password').exists(),
   ]
 }
-
-export const verifyUserMiddleware = (req, res, next) => {
+const verifyUserMiddleware = (req, res, next) => {
   if (req.method === 'OPTIONS') {
     return next()
   }
@@ -30,4 +29,10 @@ export const verifyUserMiddleware = (req, res, next) => {
     req.user = decoded
     next()
   } catch (error) {}
+}
+
+module.exports = {
+  signUpMiddleware,
+  signInMiddleware,
+  verifyUserMiddleware,
 }

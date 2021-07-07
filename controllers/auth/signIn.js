@@ -1,9 +1,9 @@
-import { User } from '../../models/User.js'
-import bcrypt from 'bcryptjs'
-import jwt from 'jsonwebtoken'
-import { validationResult } from 'express-validator'
+const User = require('./../../models/User')
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
+const { validationResult } = require('express-validator')
 
-export const signIn = async (req, res) => {
+const signIn = async (req, res) => {
   try {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
@@ -38,4 +38,8 @@ export const signIn = async (req, res) => {
     console.log(error)
     res.status(500).json({ message: 'Something went wrong...' })
   }
+}
+
+module.exports = {
+  signIn,
 }

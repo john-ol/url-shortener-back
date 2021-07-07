@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
+const { Schema, model } = require('mongoose')
 
-const linkSchema = mongoose.Schema({
+const linkSchema = Schema({
   originLink: {
     type: String,
     required: true,
@@ -24,9 +24,10 @@ const linkSchema = mongoose.Schema({
     default: 0,
   },
   owner: {
-    type: mongoose.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'Users',
   },
 })
 
-export const Link = mongoose.model('Links', linkSchema)
+const Link = model('Links', linkSchema)
+module.exports = Link

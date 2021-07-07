@@ -1,5 +1,6 @@
-import { Link } from './../../models/Link.js'
-export const getLinkById = async (req, res) => {
+const Link = require('./../../models/Link')
+
+const getLinkById = async (req, res) => {
   try {
     if (req.params.id.length !== 24) {
       return res.status(404).json({ message: 'Invalid link ID' })
@@ -20,4 +21,8 @@ export const getLinkById = async (req, res) => {
     console.log(error)
     res.status(500).json({ message: 'Something went wrong...' })
   }
+}
+
+module.exports = {
+  getLinkById,
 }
