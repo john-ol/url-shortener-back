@@ -16,18 +16,22 @@ app.use('/:code', redirect)
 const PORT = process.env.PORT || 5000
 const CONNECTION_URL = process.env.DB_URL
 
-mongoose
-  .connect(CONNECTION_URL, {
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server has been started on port: ${PORT}`)
-    })
-  })
-  .catch((error) => {
-    console.log(error)
-  })
-mongoose.set('useFindAndModify', false)
+// mongoose
+//   .connect(CONNECTION_URL, {
+//     useCreateIndex: true,
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true,
+//   })
+//   .then(() => {
+app.listen(PORT, () => {
+  console.log(`Server has been started on port: ${PORT}`)
+})
+//   })
+//   .catch((error) => {
+//     console.log(error)
+//   })
+// mongoose.set('useFindAndModify', false)
+
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
