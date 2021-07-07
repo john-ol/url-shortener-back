@@ -26,7 +26,3 @@ mongoose.connect(CONNECTION_URL, {
 })
 
 mongoose.set('useFindAndModify', false)
-
-app.get('/', function (req, res) {
-  res.send('hello world')
-})
