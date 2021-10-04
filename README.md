@@ -12,7 +12,7 @@ The project is made with React library and Material-UI framework. With this web 
 [![express validator](https://www.oleinikov.dev/readme/express-validator.svg "express validator")](https://www.oleinikov.dev/readme/express-validator.svg "express validator")
 [![mongo DB](https://www.oleinikov.dev/readme/mongo-db.svg "mongo DB")](https://www.oleinikov.dev/readme/mongo-db.svg "mongo DB")
 [![jwt](https://www.oleinikov.dev/readme/jwt.svg "jwt")](https://www.oleinikov.dev/readme/jwt.svg "jwt")
-[![bcrypt js](https://www.oleinikov.dev/readme/bcryps-js.svg "bcrypt js")](https://www.oleinikov.dev/readme/bcryps-js.svg "bcrypt js")
+[![bcrypt js](https://www.oleinikov.dev/readme/bcrypt-js.svg "bcrypt js")](https://www.oleinikov.dev/readme/bcrypt-js.svg "bcrypt js")
 
 ## 
 **Images:**
