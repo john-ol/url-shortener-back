@@ -8,9 +8,12 @@ The project is made with React library and Material-UI framework. With this web 
 ## 
 **Back-end:**
 
-| ![Express](https://www.oleinikov.dev/project-icons/express.svg) | ![Express-validator](https://www.oleinikov.dev/project-icons/express-validator.svg) | ![Mongo DB](https://www.oleinikov.dev/project-icons/mongo-db.svg) | ![JSON webtoken](https://www.oleinikov.dev/project-icons/jwt.svg) | ![BcryptJs](https://www.oleinikov.dev/project-icons/bcrypt-js.svg) | 
-|:--:|:--:|:--:|:--:|:--:|
-| Express | Express-validator | Mongo DB | JSON webtoken | BcryptJs | 
+[![express](https://www.oleinikov.dev/readme/express.svg "express")](https://www.oleinikov.dev/readme/express.svg "express")
+[![express validator](https://www.oleinikov.dev/readme/express-validator.svg "express validator")](https://www.oleinikov.dev/readme/express-validator.svg "express validator")
+[![mongo DB](https://www.oleinikov.dev/readme/mongo-db.svg "mongo DB")](https://www.oleinikov.dev/readme/mongo-db.svg "mongo DB")
+[![jwt](https://www.oleinikov.dev/readme/jwt.svg "jwt")](https://www.oleinikov.dev/readme/jwt.svg "jwt")
+[![bcrypt js](https://www.oleinikov.dev/readme/bcryps-js.svg "bcrypt js")](https://www.oleinikov.dev/readme/bcryps-js.svg "bcrypt js")
 
+## 
 **Images:**
 [![Url-shortener](https://www.oleinikov.dev/static/8c26e71b803e2f357b4a7e67376fbff3/99d89/url-shortener-featured.webp "Url-shortener")](https://www.oleinikov.dev/static/8c26e71b803e2f357b4a7e67376fbff3/99d89/url-shortener-featured.webp "Url-shortener")
